@@ -79,6 +79,7 @@ app.get("/janken", (req, res) => {
     win += 1;
     total += 1;
   }
+  // win += 1;
   const display = {
     your: hand,
     cpu: cpu,

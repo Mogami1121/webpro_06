@@ -18,6 +18,13 @@ console.log('Hello');
 
 ```mermaid
 flowchart TD;
+開始-->終了
+```
+
+```すごいね!!!```
+
+```mermaid
+flowchart TD;
 start["開始"];
 end1["終了"]
 if{"条件に合うか"}

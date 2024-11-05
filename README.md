@@ -51,7 +51,7 @@ janken | 1から3の乱数を取得し，1ならグー，2ならチョキ，3な
 それぞれのプログラムについて説明していく
 ## hello1
 hello1は```message1```と```message2```にそれぞれ```Hello world```と```Bon jour```の文字列を格納し，
-```show.ejs```表示するプログラムである．
+```show.ejs```で表示するプログラムである．
 
 ## hello2
 hello2は文字列```Hello world```と```Bon jour```を直接表示させるプログラムである．

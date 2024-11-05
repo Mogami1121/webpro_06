@@ -12,6 +12,10 @@ janken.ejs | じゃんけんの画面
 console.log('Hello');
 ```
 
+1. app5.jsを起動する
+1. webブラウザでlocalhost:8080/public/janken.htmlにアクセスする
+1. 自分の手を入力する
+
 ```mermaid
 flowchart TD;
 start["開始"];

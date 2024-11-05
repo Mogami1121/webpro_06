@@ -6,12 +6,13 @@
 -|-
 app5.js | プログラム本体
 public/janken.html | じゃんけんの開始画面
+janken.ejs | じゃんけんの画面
 
-'''javascript
+```javascript
 console.log('Hello');
-'''
+```
 
-'''mermaid
+```mermaid
 flowchart TD;
 start["開始"];
 end1["終了"]
@@ -24,4 +25,4 @@ if-->|yes|win
 win-->end1
 if-->|no|loose
 loose-->end1
-'''
+```

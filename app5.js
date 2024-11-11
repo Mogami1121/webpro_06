@@ -90,15 +90,24 @@ app.get("/janken", (req, res) => {
   }
   res.render( 'janken', display );
 });
+// 11/12 もっとまともにしました
+app.get("/hoi", (req, res) => {
+  const num = Math.floor( Math.random() * 4 + 1 );
+  let enemy = '';
+  let you = req.query.hand;
+  let judge = '';
+  if( num==1 ) enemy = '上';
+  else if( num==2 ) enemy = '下';
+  else if( num==3 ) enemy = '右';
+  else if( num==4 ) enemy = '左';
 
-app.get("/sugoi", (req, res) => {
-  const num = Math.floor( Math.random() * 2 + 1 );
-  let sg = '';
-  let hand = req.query.hand;
-  if( num==1 ) sg = 'すごい';
-  else if( num==2 ) sg = 'すごくない';
-  console.log( 'おまえは' + sg + 'です' );
-  res.render( 'sugoi', {hand:hand, sg:sg} );
+  if( enemy==you ) judge = '負け'
+  else judge = '勝ち'
+
+  console.log( 'おまえは' + you + 'を向きました' );
+  console.log( '相手は' + enemy + 'を指さしました');
+  console.log( 'お前の' + judge + 'です');
+  res.render( 'hoi', {you:you, enemy:enemy, judge:judge} );
 });
 
 app.get("/iqtest", (req, res) => {

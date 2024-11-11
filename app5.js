@@ -91,4 +91,24 @@ app.get("/janken", (req, res) => {
   res.render( 'janken', display );
 });
 
+app.get("/sugoi", (req, res) => {
+  const num = Math.floor( Math.random() * 2 + 1 );
+  let sg = '';
+  let hand = req.query.hand;
+  if( num==1 ) sg = 'すごい';
+  else if( num==2 ) sg = 'すごくない';
+  console.log( 'おまえは' + sg + 'です' );
+  res.render( 'sugoi', {hand:hand, sg:sg} );
+});
+
+app.get("/iqtest", (req, res) => {
+  const num = Math.floor( Math.random() * 2 + 1 );
+  let head = '';
+  let iq = req.query.iq;
+  if( num==1 ) sg = '良い';
+  else if( num==2 ) sg = '悪い';
+  console.log( 'おまえの頭は' + sg + 'です' );
+  res.render( 'iqtest', {head:sg, iq:iq} );
+});
+
 app.listen(8080, () => console.log("Example app listening on port 8080!"));

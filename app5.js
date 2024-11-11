@@ -110,14 +110,20 @@ app.get("/hoi", (req, res) => {
   res.render( 'hoi', {you:you, enemy:enemy, judge:judge} );
 });
 
-app.get("/iqtest", (req, res) => {
+app.get("/punch", (req, res) => {
   const num = Math.floor( Math.random() * 2 + 1 );
-  let head = '';
-  let iq = req.query.iq;
-  if( num==1 ) sg = '良い';
-  else if( num==2 ) sg = '悪い';
-  console.log( 'おまえの頭は' + sg + 'です' );
-  res.render( 'iqtest', {head:sg, iq:iq} );
+  let enemy_side = '';
+  let side = req.query.side;
+  let judge = ''
+  if( num==1 ) enemy_side = '右';
+  else if( num==2 ) enemy_side = '左';
+
+  if( enemy_side==side ) judge = 'ふせがれ'
+  else judge = 'あたり'
+  console.log( 'お前は' + side + '側をなぐりました' );
+  console.log( '相手は' + enemy_side + '側をガードしました' );
+  console.log( 'お前の攻撃は' + judge + 'ました' );
+  res.render( 'punch', {side:side, enemy_side:enemy_side, judge:judge} );
 });
 
 app.listen(8080, () => console.log("Example app listening on port 8080!"));

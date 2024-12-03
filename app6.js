@@ -70,10 +70,7 @@ app.get("/janken", (req, res) => {
     judgement = 'あいこ';
     total += 1;
   }
-  // ここに勝敗の判定を入れる
-  // 今はダミーで人間の勝ちにしておく
-  win += 1;
-  total += 1;
+
   const display = {
     your: hand,
     cpu: cpu,

@@ -1,6 +1,6 @@
 # webpro_06
 
-'''mermaid
+```mermaid
 \flowchart TD
     A[トップページ] --> B[駅一覧ページ]
     B --> C[駅詳細ページ]

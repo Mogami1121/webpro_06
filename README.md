@@ -1,12 +1,9 @@
 # webpro_06
+
 '''mermaid
-stateDiagram-v2
-    [*] --> TopPage
-
-    TopPage --> KeiyoList : 京葉線一覧へ
-    TopPage --> AddForm : 駅追加フォームへ
-
-    KeiyoList --> DetailPage : 詳細ページへ
-    DetailPage --> KeiyoList : 戻る
-
-    AddForm --> KeiyoList : 追加後一覧へ
+\flowchart TD
+    A[トップページ] --> B[駅一覧ページ]
+    B --> C[駅詳細ページ]
+    B --> D[新規追加ページ]
+    D --> B[追加して一覧へ戻る]
+    C --> B[戻る]

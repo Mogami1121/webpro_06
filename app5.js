@@ -107,4 +107,18 @@ app.get("/keiyo2/:number", (req, res) => {
   res.render('keiyo2_detail', {data: detail} );
 });
 
+app.get("/keiyo_add2", (req, res) => {
+  let id = req.query.id;
+  let code = req.query.code;
+  let name = req.query.name;
+  //追加部分
+  let change = req.query.change;
+  let passengers = req.query.passengers;
+  let distance = req.query.distance;
+  let newdata = { id: id, code: code, name: name, change: change, passengers: passengers, distance: distance};
+  //ついかおわり
+  station2.push( newdata );
+  res.render('db3', { data: station2 });
+});
+
 app.listen(8080, () => console.log("Example app listening on port 8080!"));

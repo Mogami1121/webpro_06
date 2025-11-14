@@ -10,3 +10,5 @@ flowchart TD
     D --> B
     B --> E[直前予想]
     E --> B
+    C --> D
+    C --> E

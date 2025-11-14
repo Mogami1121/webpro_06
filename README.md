@@ -1,7 +1,7 @@
 # webpro_06
 
 ```mermaid
-\flowchart TD
+flowchart TD
     A[トップページ] --> B[駅一覧ページ]
     B --> C[駅詳細ページ]
     B --> D[新規追加ページ]

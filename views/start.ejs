@@ -1,0 +1,32 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>スタート展示情報</title>
+</head>
+<body>
+<h2>スタート展示情報</h2>
+  <table border="1">
+  <tr>
+    <th>艇</th>
+    <th>名前</th>
+    <th>スタートタイム</th>
+    <th>チルト角</th>
+    <th>モーター複勝率</th>
+  </tr>
+
+      <% let num = 1; %>
+    <% for(let s of data) { %>
+      <tr>
+        <td><%= num %></td>
+        <td><%= s.name %></td>
+        <td><%= s.st %></td>
+        <td><%= s.chilt %></td>
+        <td><%= s.morter %></td>
+      </tr>
+      <% num++; %>
+    <% } %>
+  </table>
+    <a href="index">トップへ戻る</a>
+    </body>
+</html>

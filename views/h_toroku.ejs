@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>選手登録</title>
+</head>
+<body>
+  <h2>選手情報追加</h2>
+
+  <form action="/add" method="post">
+    <p>名前：<input type="text" name="name"></p>
+    <p>階級：
+    <select name="class">
+    <option value="A1">A1</option>
+    <option value="A2">A2</option>
+    <option value="B1">B1</option>
+    <option value="B2">B2</option>
+    </select></p>
+    <p>性別：
+    <input type="radio" name="sex" value="男">男
+    <input type="radio" name="sex" value="女">女
+    </p>
+    <p>年齢：<input type="number" name="age"></p>
+    <p>出身/支部：<input type="text" name="cnt"></p>
+    <p>体重：<input type="number" name="wht"></p>
+
+    <button type="submit">追加</button>
+  </form>
+
+  <a href="index3">もどる</a>
+</body>
+</html>

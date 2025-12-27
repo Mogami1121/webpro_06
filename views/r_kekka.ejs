@@ -1,0 +1,34 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>レース結果</title>
+</head>
+<body>
+<h2>レース結果</h2>
+  <table border="1">
+  <tr>
+    <th>着順</th>
+    <th>艇番</th>
+    <th>名前</th>
+  </tr>
+      <% let num = 1; %>
+    <% for(let s of data) { %>
+      <tr>
+        <td><%= num %></td>
+        <td><%= s.number %></td>
+        <td><%= s.name %></td>
+      </tr>
+      <% num++; %>
+    <% } %>
+  </table>
+  <h2>確定オッズ</h2>
+  <!-- 3連単用 -->
+  <%let tan = (Math.random() * (1000.0 - 10.0) + 10.0).toFixed(1);%>
+  <%let puku = (tan/3).toFixed(3);%>
+  
+  <p>3連単<%= tan %>倍</p>
+  <p>3連複<%= puku %>倍</p>
+    <a href="/index2">トップへ戻る</a>
+    </body>
+</html>
